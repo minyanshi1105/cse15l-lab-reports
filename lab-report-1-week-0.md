@@ -1,1 +1,2 @@
-![Image]("https://user-images.githubusercontent.com/114315303/192121410-cad0d298-9ec1-4739-80c7-4c07b2240b5c.png")
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/3efb5f85e8d54dfc7e69524fbedb84466b95011d/Screen%20Shot%202022-09-24%20at%203.44.25%20PM.png)
+
