@@ -81,24 +81,17 @@ java WhereAmI
 1. Enter This commands (on your own computer) to set up:
 ```
 $ ssh-keygen
-Generating public/private rsa key pair.
-Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in /Users/joe/.ssh/id_rsa.
-Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
-The key's randomart image is:
-+---[RSA 3072]----+
-|                 |
-|       . . + .   |
-|      . . B o .  |
-|     . . B * +.. |
-|      o S = *.B. |
-|       = = O.*.*+|
-|        + * *.BE+|
-|           +.+.o |
-|             ..  |
-+----[SHA256]-----+
 ```
+Then by fellowing the instruction (you may just press `enter`) you will see this:
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/b8486904c82b6d3b80c3bb35711ca158026eb021/CSE%2015L%20Week-1%20Lab-1%20Step%205.png)
+2. Sign to your remote account again and create a new directory with the fellowing code:
+```
+mkdir .ssh
+```
+3. Logout your remote account. 
+4. On your own account, type in the fellowing command with your own username and the path you saw in the command above:
+```
+$ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/c67584524d09e761ce214ec8616a853f8a6e8f92/CSE%2015L%20Week-1%20Lab-1%20Step%205.2.png)
+
