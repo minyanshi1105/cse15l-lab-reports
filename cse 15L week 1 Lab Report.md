@@ -40,9 +40,10 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 
 ## Step 3: Trying Some Commands
 * cd ~
-cd
-ls -lat
-ls -a
-ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc, where the abc is one of the other group members’ username
-cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/
-cat /home/linux/ieng6/cs15lfa22/public/hello.txt
+* cd
+* ls -lat
+* ls -a
+* ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc, where the abc is one of the other group members’ username
+* cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/
+* cat /home/linux/ieng6/cs15lfa22/public/hello.txt
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ecc41f2aa3c49f1ce2dab1e5cde3b993791999e0/CSE%2015L%20Week-1%20Lab-1%20Step%203.png)
