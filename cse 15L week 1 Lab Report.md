@@ -47,3 +47,30 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 * cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/
 * cat /home/linux/ieng6/cs15lfa22/public/hello.txt
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ecc41f2aa3c49f1ce2dab1e5cde3b993791999e0/CSE%2015L%20Week-1%20Lab-1%20Step%203.png)
+  
+## Step 4: Moving Files with scp
+* The command for capy a file or files from your computer to a remote computer is called `scp`.*
+1. Create a file on your own computer named WhereAmI.java, and put in the following contents:
+```
+  class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
+2. compile and run the file using `javac` and `java` commands:
+```
+javac WhereAmI.java
+java WhereAmI
+```
+3. Run this command in the terminal from the directory where you create the file *WhereAmI.java*
+4. Log into ieng6 with `ssh` again.
+5. Check `ls`, and then you will see the file *WhereAmI.java* in your home directory
+6. Run the program on the ieng6 computer using the same javac and java commands from before.
+```
+javac WhereAmI.java
+java WhereAmI
+```
