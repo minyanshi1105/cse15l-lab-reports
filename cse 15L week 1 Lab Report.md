@@ -16,7 +16,7 @@ The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
-Type `yes` and press enter.
+Type `yes` and press enter.\
 4. Enter the password. (if you forget your passward, change it through out the website [[TUTORIAL] How to Reset your Password](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit))
 5. After successfully logged in, you may see this:
 ```
@@ -93,5 +93,6 @@ mkdir .ssh
 ```
 $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
+(Since I create the dir before the screenshoot, it shows the dir exist already.)
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/c67584524d09e761ce214ec8616a853f8a6e8f92/CSE%2015L%20Week-1%20Lab-1%20Step%205.2.png)
 
