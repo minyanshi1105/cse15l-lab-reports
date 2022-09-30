@@ -36,3 +36,4 @@ ieng6-203   23:25:01   1  0.08,  0.15,  0.11
 Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 ```
 6. From the second time, once you successfully logged in, you may this the message below:
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ae7d4059b5ce1ad4c38105965a16a60063a2eca6/CSE%2015L%20Week-1%20Lab-1%20Step%202.png)
