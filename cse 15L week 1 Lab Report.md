@@ -17,7 +17,7 @@ RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?
 ```
 Type `yes` and press enter.
-4. Enter your password. (if you forget your passward, change it through out the website [[TUTORIAL] How to Reset your Password](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit))
+4. Enter the password. (if you forget your passward, change it through out the website [[TUTORIAL] How to Reset your Password](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit))
 5. After successfully logged in, you may see this:
 ```
 # Now on remote server
@@ -49,7 +49,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ecc41f2aa3c49f1ce2dab1e5cde3b993791999e0/CSE%2015L%20Week-1%20Lab-1%20Step%203.png)
   
 ## Step 4: Moving Files with scp
-* The command for capy a file or files from your computer to a remote computer is called `scp`.*
+* The command for capy a file or files from your computer to a remote computer is called `scp`.
 1. Create a file on your own computer named WhereAmI.java, and put in the following contents:
 ```
   class WhereAmI {
@@ -61,7 +61,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
   }
 }
 ```
-2. compile and run the file using `javac` and `java` commands:
+2. compile and run the file using `javac` and `java` commands to check if it works:
 ```
 javac WhereAmI.java
 java WhereAmI
@@ -73,4 +73,32 @@ java WhereAmI
 ```
 javac WhereAmI.java
 java WhereAmI
+```
+  
+## Step 5: Setting an SSH Key
+* In order to avoid to enter the password repetitivly, we should set `ssh` keys. The idea behind `ssh` keys is  a program called ssh-keygen which creates a pair of files called the public key and private key.
+  
+1. Enter This commands (on your own computer) to set up:
+```
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/joe/.ssh/id_rsa): /Users/joe/.ssh/id_rsa
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/joe/.ssh/id_rsa.
+Your public key has been saved in /Users/joe/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 joe@Joes-Mac-mini.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+|        + * *.BE+|
+|           +.+.o |
+|             ..  |
++----[SHA256]-----+
 ```
