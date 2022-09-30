@@ -96,3 +96,13 @@ $ scp /Users/joe/.ssh/id_rsa.pub cs15lfa22@ieng6.ucsd.edu:~/.ssh/authorized_keys
 (Since I create the dir before the screenshoot, it shows the dir exist already.)
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/c67584524d09e761ce214ec8616a853f8a6e8f92/CSE%2015L%20Week-1%20Lab-1%20Step%205.2.png)
 
+## Step 6: Optimizing Remote Running
+* In order to make the process less painful, you may make a *local* edit to WhereAmI.java.
+1.  Fellowing command allows you to log in and list the home directory on the remote server:
+```
+$ ssh cs15lfa22@ieng6.ucsd.edu "ls"
+```
+2. Fellowing command allows you to run multiple commands on the same line in most terminals:
+```
+$ cp WhereAmI.java OtherMain.java; javac OtherMain.java; java WhereAmI
+```
