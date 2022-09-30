@@ -8,4 +8,13 @@
 ## Step 2: Remotely Connecting
 0. (If you're on Windows, please install OpenSSh on [Link](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui))
 1. Open VScode and a new terminal  (Ctrl or Command + ` , or use the Terminal → New Terminal menu option).
-2. type in the command:`$ ssh cs15lfa22zz@ieng6.ucsd.edu`
+2. Type in the command:`$ ssh cs15lfa22zz@ieng6.ucsd.edu`
+3. If it is your first time connect to this server, you may see a message like this:
+```
+⤇ ssh cs15lfa22zz@ieng6.ucsd.edu
+The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
+RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+```
+Type `yes` and press enter.
+4. Enter your password. (if you forget your passward, change it through out the website [Link](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit))
