@@ -71,11 +71,11 @@ java WhereAmI
 ```
 3. Run this command in the terminal from the directory where you create the file *WhereAmI.java*\
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ce361ad132fd6124e65a5d6e71546e5607aa9739/CSE%2015L%20Week-1%20Lab-1%20Step%204.1.png)
-4. Log into ieng6 with `ssh` again.\
+4. Log into ieng6 with `ssh` again.
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/6b1ac373e9d1c2667e32ba66247cc538a94c2662/CSE%2015L%20Week-1%20Lab-1%20Step%204.2.png)
-(I `scp` the WhereAmI.java from my local computer to my remote server first, and then log in to the remote server. The command for `scp` will be slightly different with the part `cs15lfa22cr@ieng6.ucsd.edu:~/` almong people since we are using different remote account. Type in your own account will be fine.)\
-5. Check `ls`, and then you will see the file *WhereAmI.java* in your home directory.\
-6. Run the program on the ieng6 computer using the same javac and java commands from before.\
+(I `scp` the WhereAmI.java from my local computer to my remote server first, and then log in to the remote server. The command for `scp` will be slightly different with the part `cs15lfa22cr@ieng6.ucsd.edu:~/` almong people since we are using different remote account. Type in your own account will be fine.)
+5. Check `ls`, and then you will see the file *WhereAmI.java* in your home directory.
+6. Run the program on the ieng6 computer using the same javac and java commands from before.
 ```
 javac WhereAmI.java
 java WhereAmI
