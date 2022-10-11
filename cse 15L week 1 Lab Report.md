@@ -39,17 +39,20 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ae7d4059b5ce1ad4c38105965a16a60063a2eca6/CSE%2015L%20Week-1%20Lab-1%20Step%202.png)
 
 ## Step 3: Trying Some Commands
-* cd ~
-* cd
+* cd ~ 
+* cd (*this command allows you to move between directories*)
 * ls -lat
 * ls -a
 * ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc, where the abc is one of the other group members’ username
 * cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/
 * cat /home/linux/ieng6/cs15lfa22/public/hello.txt
+  (`cd` command allows you to view the contents of a directory)\
+  (`ls` command allows you to view the contents of a directory)\
+  (`cat` command displays the contents of one or more files without having to open the file for editing.)\
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ecc41f2aa3c49f1ce2dab1e5cde3b993791999e0/CSE%2015L%20Week-1%20Lab-1%20Step%203.png)
   
 ## Step 4: Moving Files with scp
-* The command for capy a file or files from your computer to a remote computer is called `scp`.
+* The command for capy files from your computer to a remote computer is called `scp`.
 1. Create a file on your own computer named WhereAmI.java, and put in the following contents:
 ```
   class WhereAmI {
@@ -67,15 +70,16 @@ javac WhereAmI.java
 java WhereAmI
 ```
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/e152a8e3eb9a23b1e88b2ac07e50a3a4f375f477/CSE%2015L%20Week-1%20Lab-1%20Step%204.1.png)
-3. Run this command in the terminal from the directory where you create the file *WhereAmI.java*
-4. Log into ieng6 with `ssh` again.
-5. Check `ls`, and then you will see the file *WhereAmI.java* in your home directory
-6. Run the program on the ieng6 computer using the same javac and java commands from before.
+3. Run this command in the terminal from the directory where you create the file *WhereAmI.java*\
+4. Log into ieng6 with `ssh` again.\
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/6b1ac373e9d1c2667e32ba66247cc538a94c2662/CSE%2015L%20Week-1%20Lab-1%20Step%204.2.png)
+(I `scp` the WhereAmI.java from my local computer to my remote server first, and then log in to the remote server. The command for `scp` will be slightly different with the part `cs15lfa22cr@ieng6.ucsd.edu:~/` almong people since we are using different remote account. Type in your own account will be fine.)\
+5. Check `ls`, and then you will see the file *WhereAmI.java* in your home directory.\
+6. Run the program on the ieng6 computer using the same javac and java commands from before.\
 ```
 javac WhereAmI.java
 java WhereAmI
 ```
-![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/6b1ac373e9d1c2667e32ba66247cc538a94c2662/CSE%2015L%20Week-1%20Lab-1%20Step%204.2.png)
   
 ## Step 5: Setting an SSH Key
 * In order to avoid to enter the password repetitivly, we should set `ssh` keys. The idea behind `ssh` keys is  a program called ssh-keygen which creates a pair of files called the public key and private key.
