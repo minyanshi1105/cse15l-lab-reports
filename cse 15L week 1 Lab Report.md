@@ -69,7 +69,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 javac WhereAmI.java
 java WhereAmI
 ```
-![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ce361ad132fd6124e65a5d6e71546e5607aa9739/CSE%2015L%20Week-1%20Lab-1%20Step%204.1.png)
+![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/ce361ad132fd6124e65a5d6e71546e5607aa9739/CSE%2015L%20Week-1%20Lab-1%20Step%204.1.png)\
 3. Run this command in the terminal from the directory where you create the file *WhereAmI.java*\
 4. Log into ieng6 with `ssh` again.\
 ![Image](https://github.com/minyanshi1105/cse15l-lab-reports/blob/6b1ac373e9d1c2667e32ba66247cc538a94c2662/CSE%2015L%20Week-1%20Lab-1%20Step%204.2.png)
