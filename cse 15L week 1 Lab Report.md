@@ -45,7 +45,7 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lfa22
 * ls -a
 * ls <directory> where <directory> is /home/linux/ieng6/cs15lfa22/cs15lfa22abc, where the abc is one of the other group members’ username
 * cp /home/linux/ieng6/cs15lfa22/public/hello.txt ~/
-* cat /home/linux/ieng6/cs15lfa22/public/hello.txt
+* cat /home/linux/ieng6/cs15lfa22/public/hello.txt\
   (`cd` command allows you to view the contents of a directory)\
   (`ls` command allows you to view the contents of a directory)\
   (`cat` command displays the contents of one or more files without having to open the file for editing.)\
