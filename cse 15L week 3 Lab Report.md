@@ -21,7 +21,7 @@ The method reverseInPlace fail the test because of the command `arr[i] = arr[arr
 <br />
 The method reverse fail the test because of the command `arr[i] = newArray[arr.length-i-1]` and `return arr`. The command `arr[i] = newArray[arr.length-i-1]` let arr[i] equal to the defalt value 0 and `return arr` will return an array with value 0 at every index. After create `int[] newArry` with the same length as the input arguement `int[] arr` and the defalt value 0 for each element in the newArry, we should let `newArray[arr.length - i - 1] = arr[i]`, passing the value from the back of the `arry` to the `newArry`. After updating the value on each index of the `newArray` we should return `newArray` which is an array with the reversed value of the `arry`. <br />
 <img width="1101" alt="Week 3 Lab Screen Shots 1 4" src="https://user-images.githubusercontent.com/114315303/195731356-f78ebbc8-3269-4fc7-86c8-5b5b22ccab6a.png">
-(Then we may pass the test.)
+(Then we can pass the test.)
 
 
 ## List Method
