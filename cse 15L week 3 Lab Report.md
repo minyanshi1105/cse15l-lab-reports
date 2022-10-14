@@ -34,5 +34,6 @@ The method append fail the test after append ([1,2,3]) to an empty LinkedList ob
 2. The bug and Explainatino:
 <img width="1098" alt="Week 3 Lab Screen Shots 2 2" src="https://user-images.githubusercontent.com/114315303/195764431-25011adc-665d-41b1-a695-987b1bc49895.png">
 The method append fail the test since we add more than one element and the while loop to operate the appending process is massed up. The while loop actually never stop. Using the test input as an example, after add value (1) and (2), Node n = this.root equals Node(1,Node(2,null)). Therefore, n.next = Node (2,null) which isn't null. Since it doesn't not violate the while statement, we next go into the while loop for the third append. Now, in the while loop, with the command (n = n.next), we update n to equal the Node(2,null) and then update n.next to equal Node(3,null). Here is the problem that now n.next is equal to Node(3,null) which isn't null. As the while statement is always true, it will be an infite loop, adding Node(3,null) untill we outof memory.
-
+<img width="927" alt="Week 3 Lab Screen Shots 2 3" src="https://user-images.githubusercontent.com/114315303/195772560-b83972c6-ccfe-4ef4-8234-fd662ff18ba3.png">
+(the bug will be fixed after moving the appending command `n.next = new Node(value,null)` out of the while loop)
 ---
