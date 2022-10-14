@@ -68,13 +68,19 @@ In this screenshot we seen ("/") as the input arguement, which ask the handleReq
 <img width="948" alt="Week 3 Lab Screen Shot 0 2" src="https://user-images.githubusercontent.com/114315303/195948235-bb164249-4add-4ba3-be4e-ba7da63b10c8.png">
 In this screenshot, we call the add string method. We seen ("anewstringtoadd") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd".<br />
 <br />
+<br />
+<br />
 
 <img width="944" alt="Week 3 Lab Screen Shot 0 3" src="https://user-images.githubusercontent.com/114315303/195949256-9062609b-e360-43dc-a0c0-6f5e8a14055c.png">
 In this screenshot, we seen ("pineapple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple".<br />
 <br />
+<br />
+<br />
 
 <img width="950" alt="Week 3 Lab Screen Shot 0 4" src="https://user-images.githubusercontent.com/114315303/195949338-25d5f663-9e2a-4c9e-8e97-e0d1017ecff2.png">
 In this screenshot, we seen ("apple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple apple".<br />
+<br />
+<br />
 <br />
 
 3. Search Method <br />
@@ -82,6 +88,13 @@ In this screenshot, we seen ("apple") as the input arguement and add this string
 In this screenshot, we seen ("app") as the input arguement and return all the element that contains "app" in the current string (String variable s). Therefore the return string is: "pineapple apple". <br />
 <br />
 
+4. Invalied Input <br />
+<img width="946" alt="Week 3 Lab Screen Shot 0 6" src="https://user-images.githubusercontent.com/114315303/195950267-5ae48f3c-69b2-4b3d-aaea-d5e06bb1c5f6.png">
+If we put other element other than "s=" (like "i=") in the input query, the handleRequest method will detecte it and return "Not a String!", providing error message to indicate the wrong input query.<br />
+<br />
+<br />
+<img width="951" alt="Week 3 Lab Screen Shot 0 7" src="https://user-images.githubusercontent.com/114315303/195950706-4d55f33d-0e20-4f2c-9799-c4a9c577eea3.png">
+If we try to call method other than "add" and "search" (like "delete") in the input query, the handleRequest method will detecte it and return "404 Not Found!", providing error message to indicate the wrong input query.<br />
 
 ---
 # Part 2
@@ -99,6 +112,7 @@ The method reverse fail the test with {1,2,3,4} as input that we get {0,0,0,0} i
 <img width="956" alt="Week 3 Lab Screen Shots 1 0" src="https://user-images.githubusercontent.com/114315303/195727291-4b6d0d3f-c7e0-430d-a10a-6162614d96c9.png">
 The method reverseInPlace fail the test because of the command (arr[i] = arr[arr.length-i-1]). This command mirror the array by the middle of the array. It does reversed the entire array because those orginal values before the middle point of the array get changed without being stored. Using the input of the test {1,2,3,4} as an example, [1,2] has already been changed to [4,3] when we trying to pass their value to the later index. Value [1,2] does not get stored and can not be find later. Therefore, with this method we are unable to pass the orginal values before the midpoint to index after the mid point. <br />
 <br />
+
 
 The method reverse fail the test because of the command (arr[i] = newArray[arr.length-i-1]) and (return arr). The command (arr[i] = newArray[arr.length-i-1]) let arr[i] equal to the defalt value 0 and (return arr) will return an array with value 0 at every index. After create (int[] newArry) with the same length as the input arguement (int[] arr) and the defalt value 0 for each element in the newArry, we should let (newArray[arr.length - i - 1] = arr[i]), passing the value from the back of the (arry) to the (newArry). After updating the value on each index of the (newArray) we should return (newArray) which is an array with the reversed value of the (arry). <br />
 <img width="1101" alt="Week 3 Lab Screen Shots 1 4" src="https://user-images.githubusercontent.com/114315303/195731356-f78ebbc8-3269-4fc7-86c8-5b5b22ccab6a.png">
