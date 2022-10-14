@@ -25,7 +25,7 @@ The method reverse fail the test because of the command (arr[i] = newArray[arr.l
 (Then we can pass the test.)
 
 
-## List Method
+## LinkedList Method
 1. The failure-inducing input and the symptom:
 <img width="1086" alt="Week 3 Lab Screen Shots 2 1" src="https://user-images.githubusercontent.com/114315303/195762600-8b53b077-66e3-4889-b352-c287eba7bf2b.png">
 The method append fail the test after append ([1,2,3]) to an empty LinkedList object that we get a OutOfMemoryErro instead of the expected outcome that the third node has value 3.<br />
