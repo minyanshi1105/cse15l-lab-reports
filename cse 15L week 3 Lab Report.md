@@ -2,6 +2,86 @@
 ---
 # Part 1
 ---
+## Code For Simplest Search Engine
+```
+import java.io.IOException;
+import java.net.URI;
+
+class Handler implements URLHandler {
+
+    String s = " ";
+    public String handleRequest(URI url) {
+        
+         if (url.getPath().equals("/")) {
+            return "String is now:" + s;
+        } 
+        else if (url.getPath().contains("/add")) {
+            String[] parameters = url.getQuery().split("=");
+                if (parameters[0].equals("s")) {
+                    s += parameters[1] + " ";
+                    return ("List of string is now:" + s);
+                }
+            return "Not a String!";
+        }
+        else if (url.getPath().contains("/search")) {
+            String[] parameters = url.getQuery().split("=");
+            if (parameters[0].equals("s")) {
+                if(s != null){
+                    String[] StringArr = s.split(" ");
+                    String selectedString = "";
+                    for(int i = 0; i < StringArr.length; i++) {
+                        if(StringArr[i].contains(parameters[1])){
+                            selectedString += " " + StringArr[i];
+                        }
+                    }
+                    return ("Strings contains " + parameters[1] + " are:" + selectedString);
+                }
+            }
+        return "Not a String!";
+        }
+        else{
+            return "404 Not Found!"; 
+        } 
+    }
+}
+
+class SearchEngine {
+    public static void main(String[] args) throws IOException {
+        if(args.length == 0){
+            System.out.println("Missing port string!");
+            return;
+        }
+
+        int port = Integer.parseInt(args[0]);
+
+        Server.start(port, new Handler());
+    }
+}
+
+```
+1. Return Current String Method <br />
+<img width="947" alt="Week 3 Lab Screen Shot 0 1" src="https://user-images.githubusercontent.com/114315303/195947877-7c7de214-9dab-4fc1-8bbd-be3f7958263c.png">
+In this screenshot we seen ("/") as the input arguement, which ask the handleRequest method to retuen the current string (which is the String variable s and is now empty).<br />
+<br />
+
+2. Add Method <br />
+<img width="948" alt="Week 3 Lab Screen Shot 0 2" src="https://user-images.githubusercontent.com/114315303/195948235-bb164249-4add-4ba3-be4e-ba7da63b10c8.png">
+In this screenshot, we call the add string method. We seen ("anewstringtoadd") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd".<br />
+<br />
+
+<img width="944" alt="Week 3 Lab Screen Shot 0 3" src="https://user-images.githubusercontent.com/114315303/195949256-9062609b-e360-43dc-a0c0-6f5e8a14055c.png">
+In this screenshot, we seen ("pineapple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple".<br />
+<br />
+
+<img width="950" alt="Week 3 Lab Screen Shot 0 4" src="https://user-images.githubusercontent.com/114315303/195949338-25d5f663-9e2a-4c9e-8e97-e0d1017ecff2.png">
+In this screenshot, we seen ("apple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple apple".<br />
+<br />
+
+3. Search Method <br />
+<img width="949" alt="Week 3 Lab Screen Shot 0 5" src="https://user-images.githubusercontent.com/114315303/195949610-cbeb2431-fde8-4721-a89d-a17561bfd8d8.png">
+In this screenshot, we seen ("app") as the input arguement and return all the element that contains "app" in the current string (String variable s). Therefore the return string is: "pineapple apple". <br />
+<br />
+
 
 ---
 # Part 2
