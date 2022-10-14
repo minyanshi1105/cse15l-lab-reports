@@ -9,9 +9,9 @@
 ## Array Method
 1. The failure-inducing input and the symptom:
 <img width="1110" alt="Week 3 Lab Screen Shots 1 2" src="https://user-images.githubusercontent.com/114315303/195725908-b2c7020d-b373-40c8-af55-88709927cef0.png">
-The method reverseInPlace fail the test with {1,2,3,4} as input that we get {4,3,3,4} instead of the expected outcome {4,3,2,1}./
+(The method reverseInPlace fail the test with {1,2,3,4} as input that we get {4,3,3,4} instead of the expected outcome {4,3,2,1}.)\
 <img width="1121" alt="Week 3 Lab Screen Shots 1 3" src="https://user-images.githubusercontent.com/114315303/195725973-b80e65c8-843f-4062-b66b-ff48fd5728af.png">
-The method reverse fail the test with {1,2,3,4} as input that we get {0,0,0,0} instead of the expected outcome {4,3,2,1}./
+(The method reverse fail the test with {1,2,3,4} as input that we get {0,0,0,0} instead of the expected outcome {4,3,2,1}.)\
 
 2. The bug:
 <img width="956" alt="Week 3 Lab Screen Shots 1 0" src="https://user-images.githubusercontent.com/114315303/195727291-4b6d0d3f-c7e0-430d-a10a-6162614d96c9.png">
