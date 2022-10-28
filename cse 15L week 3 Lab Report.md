@@ -1,4 +1,4 @@
-# Minyan Shi's CSE 15L Week 1 Lab Report
+# Minyan Shi's CSE 15L Week 3 Lab Report
 ---
 # Part 1
 ---
