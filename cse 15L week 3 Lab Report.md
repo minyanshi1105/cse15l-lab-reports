@@ -66,35 +66,35 @@ In this screenshot we seen ("/") as the input arguement, which ask the handleReq
 
 2. Add Method <br />
 <img width="948" alt="Week 3 Lab Screen Shot 0 2" src="https://user-images.githubusercontent.com/114315303/195948235-bb164249-4add-4ba3-be4e-ba7da63b10c8.png">
-In this screenshot, we call the add string method. We seen ("anewstringtoadd") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd".<br />
+In this screenshot, we call the add string method which runs once we detect there's "/add" in the input path (the part of URL before any "?"). Then the add method splits the query (the part of the URL after the first "?") into 3 parts, query befor "=", "=", and query after "=", and stored them in a SrtingArray. If the query befor "=" equal to "s", we seen the query after "=" ("anewstringtoadd") as the input arguement and add this string to String variable s which was null. Therefore the current string (String variable s) is now: "anewstringtoadd".<br />
 <br />
 <br />
 <br />
 
 <img width="944" alt="Week 3 Lab Screen Shot 0 3" src="https://user-images.githubusercontent.com/114315303/195949256-9062609b-e360-43dc-a0c0-6f5e8a14055c.png">
-In this screenshot, we seen ("pineapple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple".<br />
+In this screenshot, we call the add string method again. The add method splits the query into 3 parts and stored them in a SrtingArray. Since the query befor "=" equal to "s", we seen the query after "=" ("pineapple") as the input arguement and add this string to String variable s which was "anewstringtoadd". Therefore the current string (String variable s) is now: "anewstringtoadd pineapple".<br />
 <br />
 <br />
 <br />
 
 <img width="950" alt="Week 3 Lab Screen Shot 0 4" src="https://user-images.githubusercontent.com/114315303/195949338-25d5f663-9e2a-4c9e-8e97-e0d1017ecff2.png">
-In this screenshot, we seen ("apple") as the input arguement and add this string to String variable s. Therefore the current string (String variable s) is now: "anewstringtoadd pineapple apple".<br />
+In this screenshot, we call the add string method again. The add method splits the query into 3 parts and stored them in a SrtingArray. Since the query befor "=" equal to "s", we seen the query after "=" ("apple") as the input arguement and add this string to String variable s which was "anewstringtoadd pineapple" . Therefore the current string (String variable s) is now: "anewstringtoadd pineapple apple".<br />
 <br />
 <br />
 <br />
 
 3. Search Method <br />
 <img width="949" alt="Week 3 Lab Screen Shot 0 5" src="https://user-images.githubusercontent.com/114315303/195949610-cbeb2431-fde8-4721-a89d-a17561bfd8d8.png">
-In this screenshot, we seen ("app") as the input arguement and return all the element that contains "app" in the current string (String variable s). Therefore the return string is: "pineapple apple". <br />
+In this screenshot, we call the search string method which runs once we detect there's "/sarch" in the input path. Then the search method splits the query into 3 parts, query befor "=", "=", and query after "=", and stored them in a SrtingArray. If the query befor "=" equal to "s" and the String variable s isn't equal to null, we seen the query after "=" ("app") as the input arguement and search this substring. The String variable s will be split with " " and be stored as a String Array. For each element stored in this String Array we check wether if it contains the specific substring ("app") and return all the element that contains "app" in the StringArray( which is equal toString variable s). Therefore the return string is: "pineapple apple". <br />
 <br />
 
 4. Invalied Input <br />
 <img width="946" alt="Week 3 Lab Screen Shot 0 6" src="https://user-images.githubusercontent.com/114315303/195950267-5ae48f3c-69b2-4b3d-aaea-d5e06bb1c5f6.png">
-If we put other element other than "s=" (like "i=") in the input query, the handleRequest method will detecte it and return "Not a String!", providing error message to indicate the wrong input query.<br />
+If we put other element other than "s" (like "i") for the the query befor "=", the handleRequest method will detecte it and return "Not a String!", providing error message to indicate the wrong input query.<br />
 <br />
 <br />
 <img width="951" alt="Week 3 Lab Screen Shot 0 7" src="https://user-images.githubusercontent.com/114315303/195950706-4d55f33d-0e20-4f2c-9799-c4a9c577eea3.png">
-If we try to call method other than "add" and "search" (like "delete") in the input query, the handleRequest method will detecte it and return "404 Not Found!", providing error message to indicate the wrong input query.<br />
+If we try to use words (like "/delete") other than "/add" and "s/earch" in the input path, the handleRequest method will detecte it and return "404 Not Found!", providing error message to indicate the wrong input query.<br />
 
 ---
 # Part 2
