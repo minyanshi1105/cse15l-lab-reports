@@ -1,3 +1,7 @@
+# Minyan Shi's CSE 15L Week 5 Lab Report
+---
+## -ctime n
+This command check if a file's status was last changed n*24 hours ago.
 
 ```
 [cs15lfa22cr@ieng6-203]:technical:68$ find biomed -name "*.txt" -ctime -100
