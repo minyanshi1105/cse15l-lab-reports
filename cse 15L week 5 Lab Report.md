@@ -1,6 +1,6 @@
 # Minyan Shi's CSE 15L Week 5 Lab Report
 ---
-## -ctime n
+## find -ctime n
 This command check if a file's status was last changed n*24 hours ago. This command is useful since you can use it to search for the files created in a given amount time. Jusk like asking the terminal to show you the recent files created. <br />
 <br />
 * Sample 1: the command `find biomed -name "*.txt" -ctime -100` check all the txt file in the biomed if it was ctreated in the past 100 days, and return the file's name if it's true.
@@ -869,3 +869,39 @@ biomed/rr74.txt
 [cs15lfa22cr@ieng6-203]:technical:73$ find 911report -name "*.pdf" -ctime -1
 [cs15lfa22cr@ieng6-203]:technical:74$
 ```
+---
+## find -ls
+This command print out a standard directory listing of the file about the matching files. This command is useful since you can use it to check for the location of the matching files, helping you to find it. It also helps you to check if there exist any matching files that contains the given substrin without asking you to enter any sub-dir.  <br />
+<br />
+<br />
+* Sample 1: the command `find -name "preface*" -ls` check wether if there are any files contains `preface` as a subtring in its file's name in the technical, and return the file's relative path if it match the satement. Therefore, the terminal returns the only matching file named preface.txt and it's relative path. 
+```
+[cs15lfa22cr@ieng6-203]:technical:86$ find -name "preface*" -ls
+48671743   12 -rwxr-xr-x   1 cs15lfa22cr games        9332 Oct 19 06:28 ./911report/preface.txt
+```
+* Sample 2: the command `find -name "chapter*" -ls` check wether if there are any files contains `chapter` as a subtring in its file's name in the technical, and return the file's relative path if it match the satement. Therefore, the terminal returns the all matching files with `chapter` in its file's name and their corresponding relative path (which all locate in 911report dir). 
+```
+[cs15lfa22cr@ieng6-203]:technical:87$ find -name "chapter*" -ls
+48671647  120 -rwxr-xr-x   1 cs15lfa22cr games      118656 Oct 19 06:28 ./911report/chapter-1.txt
+48671648   52 -rwxr-xr-x   1 cs15lfa22cr games       47307 Oct 19 06:28 ./911report/chapter-10.txt
+48671649   76 -rwxr-xr-x   1 cs15lfa22cr games       71151 Oct 19 06:28 ./911report/chapter-11.txt
+48671652  132 -rwxr-xr-x   1 cs15lfa22cr games      127587 Oct 19 06:28 ./911report/chapter-12.txt
+48671654   92 -rwxr-xr-x   1 cs15lfa22cr games       89854 Oct 19 06:28 ./911report/chapter-13.1.txt
+48671655  112 -rwxr-xr-x   1 cs15lfa22cr games      110568 Oct 19 06:28 ./911report/chapter-13.2.txt
+48671662  152 -rwxr-xr-x   1 cs15lfa22cr games      150467 Oct 19 06:28 ./911report/chapter-13.3.txt
+48671663  264 -rwxr-xr-x   1 cs15lfa22cr games      265912 Oct 19 06:28 ./911report/chapter-13.4.txt
+48671664  292 -rwxr-xr-x   1 cs15lfa22cr games      290993 Oct 19 06:28 ./911report/chapter-13.5.txt
+48671665   84 -rwxr-xr-x   1 cs15lfa22cr games       79803 Oct 19 06:28 ./911report/chapter-2.txt
+48671666  264 -rwxr-xr-x   1 cs15lfa22cr games      264360 Oct 19 06:28 ./911report/chapter-3.txt
+48671667  104 -rwxr-xr-x   1 cs15lfa22cr games       99008 Oct 19 06:28 ./911report/chapter-5.txt
+48671668  152 -rwxr-xr-x   1 cs15lfa22cr games      149063 Oct 19 06:28 ./911report/chapter-6.txt
+48671669  132 -rwxr-xr-x   1 cs15lfa22cr games      128370 Oct 19 06:28 ./911report/chapter-7.txt
+48671740   88 -rwxr-xr-x   1 cs15lfa22cr games       84835 Oct 19 06:28 ./911report/chapter-8.txt
+48671742  152 -rwxr-xr-x   1 cs15lfa22cr games      149644 Oct 19 06:28 ./911report/chapter-9.txt
+```
+* Sample 3: the command `find -name "*.pdf" -ls` check wether if there are any pdf files in technical, and return the file's relative path if it match the satement. Since there isn't any pdf file in technical, the terminal return nothing.  
+```
+[cs15lfa22cr@ieng6-203]:technical:88$ find -name "*.pdf" -ls
+[cs15lfa22cr@ieng6-203]:technical:89$ 
+```
+---
