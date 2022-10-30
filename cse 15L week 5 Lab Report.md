@@ -905,3 +905,49 @@ This command print out a standard directory listing of the file about the matchi
 [cs15lfa22cr@ieng6-203]:technical:89$ 
 ```
 ---
+## find -type
+This command check all the files in the directory wether does it match the given type and return its relative path if it does. This command is useful because you can use it to check for the location of all the matching files belong to the given type. For instance, if you had be given with a zip file with both reading material(.txt) and data(.xlsx), you can use this method to check all the required reading materials with the command `find -type f`, making sure no reading has been left.<br />
+<br />
+<br />
+* Sample 1: the command `find ! -type f` check every element in the technical wether if it is a txt file, and return the the relative path if it's not a txt file. The terminal returns all the sub-dir's relative path (since there's no other non-text files). 
+```
+[cs15lfa22cr@ieng6-203]:technical:92$ find ! -type f  
+.
+./911report
+./biomed
+./government
+./government/About_LSC
+./government/Alcohol_Problems
+./government/Env_Prot_Agen
+./government/Gen_Account_Office
+./government/Media
+./government/Post_Rate_Comm
+./plos
+```
+* Sample 2: the command `find -type f` check every element in the 911report wether if it is a txt file, and return its relative path if it's a txt file. In responce, the terminal returns all the files's relative path in the 911report since all the files are txt files. 
+```
+[cs15lfa22cr@ieng6-203]:technical:98$ cd 911report
+[cs15lfa22cr@ieng6-203]:911report:99$ find -type f
+./chapter-1.txt
+./chapter-10.txt
+./chapter-11.txt
+./chapter-12.txt
+./chapter-13.1.txt
+./chapter-13.2.txt
+./chapter-13.3.txt
+./chapter-13.4.txt
+./chapter-13.5.txt
+./chapter-2.txt
+./chapter-3.txt
+./chapter-5.txt
+./chapter-6.txt
+./chapter-7.txt
+./chapter-8.txt
+./chapter-9.txt
+./preface.txt
+```
+* Sample 3: the command `find -type s` check every element in the technical wether if it is a block or character special file, and return its relative path if it is. In responce, the terminal returns nothing since such kind of files doesn't exist. 
+```
+[cs15lfa22cr@ieng6-203]:technical:102$ find -type s
+[cs15lfa22cr@ieng6-203]:technical:103$ 
+```
