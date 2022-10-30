@@ -1,8 +1,8 @@
 # Minyan Shi's CSE 15L Week 5 Lab Report
 ---
 ## -ctime n
-This command check if a file's status was last changed n*24 hours ago.
-
+This command check if a file's status was last changed n*24 hours ago.<br />
+For instance, the command `find biomed -name "*.txt" -ctime -100` check all the txt file in the biomed if it was ctreated in the past 100 days, and return the file's name if it's true. 
 ```
 [cs15lfa22cr@ieng6-203]:technical:68$ find biomed -name "*.txt" -ctime -100
 biomed/1468-6708-3-1.txt
