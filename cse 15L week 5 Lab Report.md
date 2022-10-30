@@ -1,8 +1,9 @@
 # Minyan Shi's CSE 15L Week 5 Lab Report
 ---
 ## -ctime n
-This command check if a file's status was last changed n*24 hours ago.<br />
-For instance, the command `find biomed -name "*.txt" -ctime -100` check all the txt file in the biomed if it was ctreated in the past 100 days, and return the file's name if it's true. 
+This command check if a file's status was last changed n*24 hours ago. This command is useful since you can use it to search for the files created in a given amount time. Jusk like asking the terminal to show you the recent files created. <br />
+<br />
+* Sample 1: the command `find biomed -name "*.txt" -ctime -100` check all the txt file in the biomed if it was ctreated in the past 100 days, and return the file's name if it's true.
 ```
 [cs15lfa22cr@ieng6-203]:technical:68$ find biomed -name "*.txt" -ctime -100
 biomed/1468-6708-3-1.txt
@@ -842,4 +843,29 @@ biomed/rr196.txt
 biomed/rr37.txt
 biomed/rr73.txt
 biomed/rr74.txt
+```
+* Sample 2: the command `find 911report -name "chapter*.txt" -ctime -` check all the txt file which name starts with chapter in the 911report if it was ctreated in the past 1 day, and return the file's name if it's true. (it return true because I scp the docsearch-main to the remote computer and unzip it.)
+```
+[cs15lfa22cr@ieng6-203]:technical:72$ find 911report -name "chapter*.txt" -ctime -1
+911report/chapter-1.txt
+911report/chapter-10.txt
+911report/chapter-11.txt
+911report/chapter-12.txt
+911report/chapter-13.1.txt
+911report/chapter-13.2.txt
+911report/chapter-13.3.txt
+911report/chapter-13.4.txt
+911report/chapter-13.5.txt
+911report/chapter-2.txt
+911report/chapter-3.txt
+911report/chapter-5.txt
+911report/chapter-6.txt
+911report/chapter-7.txt
+911report/chapter-8.txt
+911report/chapter-9.txt
+```
+* Sample 3: the command `find 911report -name "*.pdf" -ctime -1` check all the pdf file in the 911report if it was ctreated in the past 1 day, and return the file's name if it's true. It returns nothing since there's no pdf file in the 911report. 
+```
+[cs15lfa22cr@ieng6-203]:technical:73$ find 911report -name "*.pdf" -ctime -1
+[cs15lfa22cr@ieng6-203]:technical:74$
 ```
