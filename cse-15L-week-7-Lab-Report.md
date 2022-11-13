@@ -33,3 +33,16 @@ We hit `esc` to quit insert mode and return normal mode. As we can see the `-- I
 The :wq command means to save the changes and quit. We can now see the added line `f.toString + "is a directory"` shows up in the actual file.
 <br />
 <br />
+  
+# Part 2
+---
+1. First style:
+![WechatIMG254](https://user-images.githubusercontent.com/114315303/201506335-58b8043f-8b62-4141-8c44-9d095bdec4c8.jpeg)
+<br />
+  
+2. Second style:
+![WechatIMG255](https://user-images.githubusercontent.com/114315303/201506339-d1657068-798f-42cd-8d23-42493a73a586.jpeg)
+<br />
+* I prefer the second style because editing a file directly is easier than scp a file from your local server to the remote server which require you to write down the whole path of where you want to move to. It took a long time, and people may easily get typo. 
+<br />
+* The workload of the project or task may affect my decision on way or another. If the workload is large that I have to work on it for few days, I would choose the first style that I only have to scp the file once and do not have to log in to remote server everytime. However, if I can finish the job at once I would choose the second style since I don't have to write down the whole path of where I want to move to on the remote server. 
