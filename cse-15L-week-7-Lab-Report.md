@@ -10,9 +10,9 @@ Sequence of `vim` commands:<br />
 The `/` command means to search the given pattern fellowed right after, which is "File[] paths = f.listFiles()" in this given situation. And we hit <enter> to run this search command which will move the mouse to the first searching result. 
 <br />
 <br />
-2. ` O `
+2. `O`
 <img width="678" alt="Screen Shot 2022-11-10 at 11 14 28 PM" src="https://user-images.githubusercontent.com/114315303/201501779-dd8cd084-d98a-4abd-adb9-f60fcda2332b.png">
-The ` O ` (upper case o) command append (open) a new line above the current line, automaticly enter the insert mode. As we can see there is a `-- INSERT --` indication at the bottom.
+The O (upper case o) command append (open) a new line above the current line, automaticly enter the insert mode. As we can see there is a `-- INSERT --` indication at the bottom.
 <br />
 <br />
   
@@ -30,6 +30,6 @@ We hit `esc` to quit insert mode and return normal mode. As we can see the `-- I
   
 5. `:wq`
 <img width="803" alt="Screen Shot 2022-11-11 at 2 34 43 AM" src="https://user-images.githubusercontent.com/114315303/201502042-cb556813-e21b-445b-a5dc-12afff489864.png">
-The ` :wq ` command means to save the changes and quit. We can now see the added line `f.toString + "is a directory"` shows up in the actual file.
+The :wq command means to save the changes and quit. We can now see the added line `f.toString + "is a directory"` shows up in the actual file.
 <br />
 <br />
