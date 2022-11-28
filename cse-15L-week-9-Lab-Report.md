@@ -3,8 +3,10 @@ set -e
 
 rm -rf student-submission
 git clone $1 student-submission
-cd student-submission/
+cp TestListExamples.java student-submission
+cd student-submission
 FILE=ListExamples.java
+CPATH=.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar
 
 if [[ -f "$FILE" ]]
 then
@@ -13,33 +15,39 @@ then
 else
         echo "Cannot find the file"
         echo "Your score is 0"
-        exit
+        exit 1
 fi
 
-cp ../TestListExamples.java ./
 
 set +e
 
 SCORE=0
 
-javac -cp ".;../lib/*" ListExamples.java TestListExamples.java
+javac -cp $CPATH *.java
 
 if [[ $? -eq 0 ]]
 then
   SCORE=$(($SCORE+1))
+  echo "Successfully compiled."
 else
-  echo "Your score is" $SCORE ""
+  echo "Unsuccessfully compiled. Your score is" $SCORE ""
   exit
 fi
 
-FAILED=$(java -cp ".;../lib/*" org.junit.runner.JUnitCore TestListExamples | grep -oP "(?<=,  Failures: )[0-9]+")
 
-if [[ $? -eq 1 ]]
+java -cp $CPATH org.junit.runner.JUnitCore TestListExample > result.txt
+FAILED=$(grep "There " result.txt | grep -Eo "[1-3]")
+if [[ $? -eq 0 ]]
 then
   SCORE=$(($SCORE+2))
-else
-  SCORE=$(($SCORE+2-$FAILED))
-fi
+  echo "All test passed. Your score is" $SCORE ""
+  exit
 
-echo "Your score is" $SCORE ""
+else
+  SCORE= "$((3 - $FAILED))"
+  echo "Some test failed. Your score is $SCORE "
+  cat result.txt
+  exit 3
+
+fi
 ```
