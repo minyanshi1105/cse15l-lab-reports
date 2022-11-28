@@ -1,3 +1,5 @@
+# Minyan Shi's CSE 15L Week 9 Lab Report
+---
 ```
 set -e
 
@@ -51,3 +53,21 @@ else
 
 fi
 ```
+## Sample 1
+<img width="1021" alt="Screen Shot 2022-11-27 at 11 10 06 PM" src="https://user-images.githubusercontent.com/114315303/204216740-f7ad9750-f2a6-4d3c-ad25-93ea79a49122.png">
+
+## Sample 2
+<img width="800" alt="Screen Shot 2022-11-27 at 11 11 46 PM" src="https://user-images.githubusercontent.com/114315303/204216769-43b54f8c-6cbb-4399-9692-5059d01bb338.png">
+
+## Sample 3
+<img width="1023" alt="Screen Shot 2022-11-27 at 11 12 44 PM" src="https://user-images.githubusercontent.com/114315303/204216788-48970c0e-34cb-4c1a-a34c-1e27d24ba69d.png">
+
+
+
+
+
+
+
+
+
+
