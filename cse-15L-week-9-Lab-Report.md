@@ -33,7 +33,7 @@ then
   echo "Successfully compiled."
 else
   echo "Unsuccessfully compiled. Your score is" $SCORE ""
-  exit
+  exit 2
 fi
 
 
@@ -43,13 +43,13 @@ if [[ $? -eq 0 ]]
 then
   SCORE=$(($SCORE+2))
   echo "All test passed. Your score is" $SCORE ""
-  exit
+  exit 3
 
 else
   SCORE= "$((3 - $FAILED))"
   echo "Some test failed. Your score is $SCORE "
   cat result.txt
-  exit 3
+  exit 4
 
 fi
 ```
@@ -73,17 +73,66 @@ fi
 ```
 rm -rf student-submission
 git clone $1 student-submission
+```
+
+At the beginning of the scrip, we remove and recreate the student-submission dir, refreshing the file every time we test a new submission. 
+
+```
 cp TestListExamples.java student-submission
 cd student-submission
 ```
+Then we copy our test file to student-submission. There isn't a standard output or standard error, and the return would be null.
 
-At the beginning of the scrip, it remove and recreate the student-submission dir. It allows us to
+```
+FILE=ListExamples.java
+CPATH=.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar
 
+if [[ -f "$FILE" ]]
+then
+        echo "File exists"
+        echo "Successfully cloned"
+else
+        echo "Cannot find the file"
+        echo "Your score is 0"
+        exit 1
+fi
+```
+Next, we move on to the first if-statement, checking wether the submission contains the the target file  ListExamples.java. Since, the if-statement returns true, we echo "File exists" and "Successfully cloned" which are the standard output. Therefore, the else statement won't run, and we won't exit the process. There won't be any standard error or return code. 
 
+```
+SCORE=0
 
+javac -cp $CPATH *.java
 
+if [[ $? -eq 0 ]]
+then
+  SCORE=$(($SCORE+1))
+  echo "Successfully compiled."
+else
+  echo "Unsuccessfully compiled. Your score is" $SCORE ""
+  exit 2
+fi
+```
+However, when we test wether the file compile successfully, the if-statement return false. The else statement that "Unsuccessfully compiled. Your score is 0" (because SCORE has be initialize to 0) echos, which is the standard error. The return code will be 2 and there will be no standard out.
 
+```
+java -cp $CPATH org.junit.runner.JUnitCore TestListExample > result.txt
+FAILED=$(grep "There " result.txt | grep -Eo "[1-3]")
+if [[ $? -eq 0 ]]
+then
+  SCORE=$(($SCORE+2))
+  echo "All test passed. Your score is" $SCORE ""
+  exit 3
 
+else
+  SCORE= "$((3 - $FAILED))"
+  echo "Some test failed. Your score is $SCORE "
+  cat result.txt
+  exit 4
+
+fi
+```
+Since we already exit in the previous else statment, the rest of the code/if-statement won't run. As a result, there will be no standard output, standard error, or return code. 
 
 
 
