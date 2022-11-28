@@ -65,7 +65,9 @@ fi
 ## Sample 3
 * https://github.com/ucsd-cse15l-f22/list-methods-filename, which has a great implementation saved in a file with the wrong name.
 <img width="1023" alt="Screen Shot 2022-11-27 at 11 12 44 PM" src="https://user-images.githubusercontent.com/114315303/204216788-48970c0e-34cb-4c1a-a34c-1e27d24ba69d.png">
+
 ---
+
 ## Trace sample 2
 
 ```
