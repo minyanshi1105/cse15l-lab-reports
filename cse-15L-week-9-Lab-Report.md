@@ -53,15 +53,27 @@ else
 
 fi
 ```
+---
 ## Sample 1
+* https://github.com/ucsd-cse15l-f22/list-methods-corrected, which has the methods corrected (I would expect this to get full or near-to-full credit)
 <img width="1021" alt="Screen Shot 2022-11-27 at 11 10 06 PM" src="https://user-images.githubusercontent.com/114315303/204216740-f7ad9750-f2a6-4d3c-ad25-93ea79a49122.png">
 
 ## Sample 2
+* https://github.com/ucsd-cse15l-f22/list-methods-compile-error, which has a syntax error of a missing semicolon. Note that your job is not to fix this, but to decide what to do in your grader with such a submission!
 <img width="800" alt="Screen Shot 2022-11-27 at 11 11 46 PM" src="https://user-images.githubusercontent.com/114315303/204216769-43b54f8c-6cbb-4399-9692-5059d01bb338.png">
 
 ## Sample 3
+* https://github.com/ucsd-cse15l-f22/list-methods-filename, which has a great implementation saved in a file with the wrong name.
 <img width="1023" alt="Screen Shot 2022-11-27 at 11 12 44 PM" src="https://user-images.githubusercontent.com/114315303/204216788-48970c0e-34cb-4c1a-a34c-1e27d24ba69d.png">
-
+---
+## Trace sample 2
+```
+rm -rf student-submission
+git clone $1 student-submission
+cp TestListExamples.java student-submission
+cd student-submission
+```
+At the beginning of the scrip, it remove and recreate the student-submission dir. It allows us to
 
 
 
