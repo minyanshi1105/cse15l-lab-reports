@@ -67,12 +67,14 @@ fi
 <img width="1023" alt="Screen Shot 2022-11-27 at 11 12 44 PM" src="https://user-images.githubusercontent.com/114315303/204216788-48970c0e-34cb-4c1a-a34c-1e27d24ba69d.png">
 ---
 ## Trace sample 2
+
 ```
 rm -rf student-submission
 git clone $1 student-submission
 cp TestListExamples.java student-submission
 cd student-submission
 ```
+
 At the beginning of the scrip, it remove and recreate the student-submission dir. It allows us to
 
 
